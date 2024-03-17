@@ -161,7 +161,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
         val notificationIntent = Intent(context, StickyNotificationService::class.java)
-        val service = context.startForegroundService(notificationIntent)
+        val service = context.startService(notificationIntent)
         Timber.d("foreground service started [${service?.className}]")
     }
 
